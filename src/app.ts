@@ -7,7 +7,7 @@
 -----------------
 * Last Modified Date: 2021-10-15
 * Last Modified by: Madarász Dávid
-* Github: https://github.com/lehoczkipatricia/dolgozatFel320
+* Github: https://github.com/lehoczkipatricia/labmet
 * Licenc: MIT
 */
 const foot = document.querySelector('#footInput') as HTMLInputElement;
