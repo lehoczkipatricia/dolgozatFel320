@@ -1,16 +1,24 @@
-const radius=document.querySelector("#radius") as HTMLInputElement;
-const height=document.querySelector("#height") as HTMLInputElement;
-const result=document.querySelector("#result") as HTMLInputElement;
+/*
+* File: app.ts/app.js
+* Author: Lehoczki Patricia,Madarász Dávid
+* Copyright: 2021, Lehoczki Patricia,Madarász Dávid
+* Group: Szoft II N
+* Date: 2021-10-15
+-----------------
+* Last Modified Date: 2021-10-15
+* Last Modified by: Madarász Dávid
+* Github: https://github.com/lehoczkipatricia/dolgozatFel320
+* Licenc: MIT
+*/
+const foot = document.querySelector('#footInput') as HTMLInputElement;
+const result = document.querySelector('#result') as HTMLInputElement;
+const calcButton = document.querySelector('#calcButton') as HTMLInputElement;
 
-const calcButton=document.querySelector("#calcButton");
-
-function calcVolume(radius:number, height:number):number {
-    return 1.0/3.0 * Math.pow(radius,2) * Math.PI*height;
+function calculateMeterFromFoot():number {
+    return (+foot.value * 0.3048);
 }
 
-// console.log(add(2,4));
-
-calcButton.addEventListener("click", event => {
-    let res = calcVolume(+radius.value, +height.value);
-    result.value = String(res);
+calcButton.addEventListener('click', () => {
+    let res = Number(calculateMeterFromFoot()).toFixed(4);
+    result.value = res;
 });

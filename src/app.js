@@ -1,12 +1,22 @@
-var radius = document.querySelector("#radius");
-var height = document.querySelector("#height");
-var result = document.querySelector("#result");
-var calcButton = document.querySelector("#calcButton");
-function calcVolume(radius, height) {
-    return 1.0 / 3.0 * Math.pow(radius, 2) * Math.PI * height;
+/*
+* File: app.ts/app.js
+* Author: Lehoczki Patricia,Madarász Dávid
+* Copyright: 2021, Lehoczki Patricia,Madarász Dávid
+* Group: Szoft II N
+* Date: 2021-10-15
+-----------------
+* Last Modified Date: 2021-10-15
+* Last Modified by: Madarász Dávid
+* Github: https://github.com/lehoczkipatricia/dolgozatFel320
+* Licenc: MIT
+*/
+var foot = document.querySelector('#footInput');
+var result = document.querySelector('#result');
+var calcButton = document.querySelector('#calcButton');
+function calculateMeterFromFoot() {
+    return (+foot.value * 0.3048);
 }
-// console.log(add(2,4));
-calcButton.addEventListener("click", function (event) {
-    var res = calcVolume(+radius.value, +height.value);
-    result.value = String(res);
+calcButton.addEventListener('click', function () {
+    var res = String(calculateMeterFromFoot());
+    result.value = res;
 });
