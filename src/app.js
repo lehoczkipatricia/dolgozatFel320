@@ -17,6 +17,6 @@ function calculateMeterFromFoot() {
     return (+foot.value * 0.3048);
 }
 calcButton.addEventListener('click', function () {
-    var res = String(calculateMeterFromFoot());
-    result.value = res;
+    var res = Number(calculateMeterFromFoot()).toFixed(4);
+    result.value = String(res + " méter");
 });
